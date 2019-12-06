@@ -1,12 +1,13 @@
 package com.skilldistillery.cards.blackjack;
 
-import com.skilldistillery.cards.common.AbstractHand;
+import com.skilldistillery.cards.common.Hand;
 
-public class BlackJackHand extends AbstractHand {
+public class BlackjackHand extends Hand {
+	
+	
 
 	@Override
 	public int getHandValue() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 

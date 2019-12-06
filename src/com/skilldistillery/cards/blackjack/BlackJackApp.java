@@ -1,10 +1,13 @@
 package com.skilldistillery.cards.blackjack;
 
-public class BlackJackApp {
+public class BlackjackApp {
 
 	public static void main(String[] args) {
-		BlackJackApp app = new BlackJackApp();
-
+		BlackjackApp app = new BlackjackApp();
+		app.startGame();
 	}
 
+	public void startGame() {
+
+	}
 }
