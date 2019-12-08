@@ -5,35 +5,25 @@ import java.util.List;
 
 
 public abstract class Hand {
-	protected List<Card> cards = new ArrayList<>();
+	protected List<Card> cards;
 	
 	public Hand() {
-		
+		this.cards = new ArrayList<Card>();
 	}
 	
 	public void clear() {
-		
+		this.cards = new ArrayList<Card>();
 	}
 	
 	public void addCard(Card card) {
-		cards.add(card);
-	}
-	public void printHandandValue(List<Card> hand, int value) {
-		for (Card card : hand) {
-			System.out.println(card);
-		}
-		System.out.println("Current value is "+ value);
+		this.cards.add(card);
 	}
 	
 	public abstract int getHandValue();
 
 	@Override
 	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Hand [cards=");
-		builder.append(cards);
-		builder.append("]");
-		return builder.toString();
+		return cards.toString();
 	}
 	
 	

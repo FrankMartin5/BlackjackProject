@@ -19,10 +19,21 @@ public class Player {
 	public void stay() {
 		System.out.println("No cards were added.");
 	}
-	
+	public void showPlayerHand() {
+		System.out.println(hand.toString());
+	}
 	
 	public BlackjackHand getHand() {
 		return hand;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Player [hand=");
+		builder.append(hand);
+		builder.append("]");
+		return builder.toString();
 	}
 	
 	

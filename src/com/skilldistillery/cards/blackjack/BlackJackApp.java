@@ -1,5 +1,7 @@
 package com.skilldistillery.cards.blackjack;
 
+import java.util.Scanner;
+
 public class BlackjackApp {
 
 	public static void main(String[] args) {
@@ -8,6 +10,7 @@ public class BlackjackApp {
 	}
 
 	public void startGame() {
+		Scanner kb = new Scanner(System.in);
 		
 	}
 	
