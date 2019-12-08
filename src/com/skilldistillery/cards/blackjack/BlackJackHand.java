@@ -1,23 +1,36 @@
 package com.skilldistillery.cards.blackjack;
 
+import com.skilldistillery.cards.common.Card;
 import com.skilldistillery.cards.common.Hand;
 
 public class BlackjackHand extends Hand {
-	
-	
+
 	public BlackjackHand() {
-		
+
 	}
-	
 
 	@Override
 	public int getHandValue() {
-		return 0;
+		int sum = 0;
+		for (Card card : this.cards) {
+			sum += card.getValue();
+		}
+		return sum;
 	}
+
 	public boolean isBlackjack() {
-		 return true;
+		int sum = getHandValue();
+		if (sum == 21) {
+			return true;
+		}
+		return false;
 	}
+
 	public boolean isBust() {
+		int sum = getHandValue();
+		if (sum < 22) {
+			return false;
+		}
 		return true;
 	}
 

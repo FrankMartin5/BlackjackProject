@@ -30,10 +30,3 @@ public abstract class Hand {
 
 
 }
-//
-//public void printHandAndValue(List<Card> hand, int value) {
-//	for (Card card : hand) {
-//		System.out.println(card);
-//	}
-//	System.out.println("Total Value: " + value);
-//}
