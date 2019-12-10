@@ -10,19 +10,15 @@ public class Deck {
 	
 	// C o n s t r u c t o r s	
 	public Deck() {
-		cards = createDeck();
+		this.cards = new ArrayList<Card>(52);
+		for (Suit suit : Suit.values()) {
+			for (Rank rank: Rank.values()) {
+				this.cards.add(new Card(rank, suit));
+			}
+		}
 		shuffle();
 	}
 	
-	public List<Card> createDeck(){
-		List<Card> deck = new ArrayList<>(52);
-		for (Suit suit : Suit.values()) {
-			for (Rank rank : Rank.values()) {
-				deck.add(new Card(rank, suit));
-			}
-		}	
-		return deck;
-	}
 	// M e t h o d s
 	
 	public int checkDeckSize() {

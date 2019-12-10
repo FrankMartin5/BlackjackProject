@@ -7,10 +7,12 @@ import com.skilldistillery.cards.blackjack.BlackjackHand;
 public class Dealer extends Player {
 	private Deck deck;
 	BlackjackHand hand;
-
-	public Dealer() {
-
+	
+	public Dealer(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
 	}
+
 	
 
 	public void dealCardToPlayer(Player p) {

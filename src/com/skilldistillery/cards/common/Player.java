@@ -5,12 +5,13 @@ package com.skilldistillery.cards.common;
 import com.skilldistillery.cards.blackjack.BlackjackHand;
 
 public class Player {
-	
 	private BlackjackHand hand;
+	private String name;
 	
 	
-	public Player(){
-		
+	public Player(String name){
+		this.name = name;
+		this.hand = new BlackjackHand();
 	}
 	
 	public void hit(Card card) {
@@ -24,6 +25,9 @@ public class Player {
 	}
 	
 	public BlackjackHand getHand() {
+		return hand;
+	}
+	public BlackjackHand setHand() {
 		return hand;
 	}
 
