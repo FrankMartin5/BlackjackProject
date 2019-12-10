@@ -1,5 +1,7 @@
 package com.skilldistillery.cards.common;
 
+import java.util.List;
+
 public class Card {
 	// F i e l d s
 	private Rank rank;
@@ -17,6 +19,11 @@ public class Card {
 	
 	public int getValue() {
 		return rank.getValue();
+	}
+	public void showHand(List<Card> hand) {
+		for (Card card : hand) {
+			System.out.println(card.toString());
+		}
 	}
 	@Override
 	public int hashCode() {
