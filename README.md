@@ -3,9 +3,15 @@
 Week 5 Homework for Skill Distillery
 
 ### Overview
++ A simulated game of Blackjack
++ rules: http://www.hitorstand.net/strategy.php
 
-### How to play
+### Concepts
++ Enums, Abstraction, Polymorphism, Inheritance, Encapsulation.
++ Interfaces
++ Class hierarchies
 
 ### Topics/technologies used
-
-### Lessons learned
++  Java 8
++ Eclipse
++ Shell

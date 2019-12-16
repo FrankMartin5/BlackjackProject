@@ -3,28 +3,16 @@ package com.skilldistillery.cards.common;
 import java.util.List;
 
 public class Card {
-	// F i e l d s
-	private Rank rank;
+
 	private Suit suit;
-	
-	// C o n s t r u c t o r s
-	
-	public Card(Rank rank, Suit suit) {
+	private Rank rank;
+
+	public Card(Suit suit, Rank rank) {
 		super();
-		this.rank = rank;
 		this.suit = suit;
+		this.rank = rank;
 	}
-	
-	// M e t h o d s
-	
-	public int getValue() {
-		return rank.getValue();
-	}
-	public void showHand(List<Card> hand) {
-		for (Card card : hand) {
-			System.out.println(card.toString());
-		}
-	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -50,16 +38,19 @@ public class Card {
 		return true;
 	}
 
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append(rank);
-		builder.append(" of ");
-		builder.append(suit);
-		return builder.toString();
+	public int getValue() {
+		return rank.getValue();
 	}
 
+	@Override
+	public String toString() {
+		return rank + " of " + suit;
+	}
 
-	
-	
+	public void displayHand(List<Card> hand) {
+		for (Card card : hand) {
+			System.out.println(card.toString());
+		}
+	}
+
 }

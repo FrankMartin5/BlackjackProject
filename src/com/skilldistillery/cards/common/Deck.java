@@ -5,35 +5,30 @@ import java.util.Collections;
 import java.util.List;
 
 public class Deck {
-	// F i e l d s
-	List<Card> cards;
-	
-	// C o n s t r u c t o r s	
+
+	private List<Card> cards;
+
 	public Deck() {
 		this.cards = new ArrayList<Card>(52);
-		for (Suit suit : Suit.values()) {
-			for (Rank rank: Rank.values()) {
-				this.cards.add(new Card(rank, suit));
+		for (Suit s : Suit.values()) {
+			for (Rank r : Rank.values()) {
+				this.cards.add(new Card(s, r));
 			}
 		}
 		shuffle();
 	}
-	
-	// M e t h o d s
-	
+
 	public int checkDeckSize() {
 		return cards.size();
 	}
-	
+
 	public Card dealCard() {
 		return cards.remove(0);
+
 	}
-	public void dealCard(Hand hand) {
-		hand.addCard(cards.remove(0));
-	}
-	
+
 	public void shuffle() {
 		Collections.shuffle(cards);
 	}
-	
+
 }

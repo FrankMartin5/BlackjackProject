@@ -3,35 +3,27 @@ package com.skilldistillery.cards.blackjack;
 import com.skilldistillery.cards.common.Card;
 import com.skilldistillery.cards.common.Hand;
 
-public class BlackjackHand extends Hand {
+public class BlackJackHand extends Hand {
 
-	public BlackjackHand() {
+//	private int totalHandValue;
 
+	public BlackJackHand() {
 	}
 
 	@Override
 	public int getHandValue() {
-		int sum = 0;
-		for (Card card : this.cards) {
-			sum += card.getValue();
+		int totalHandValue = 0;
+		for (Card card : getHand()) {
+			totalHandValue += card.getValue();
 		}
-		return sum;
+		return totalHandValue;
+
 	}
 
-	public boolean isBlackjack() {
-		int sum = getHandValue();
-		if (sum == 21) {
-			return true;
+	public void displayHand() {
+		for (Card card : getHand()) {
+			System.out.println(card.toString());
 		}
-		return false;
-	}
-
-	public boolean isBust() {
-		int sum = getHandValue();
-		if (sum < 22) {
-			return false;
-		}
-		return true;
 	}
 
 }
